@@ -57,12 +57,17 @@ library of ROCm.
 
 Please use the GitHub Issues tab to notify us of issues.
 
-* Search if issue already exists in the GitHub Issues list.
-  - Use your best judgement.  If you believe your issue is the same as another, then you can just upvote the issue and comment/post to provide more details as to how you reproduced it.
-  - If you're not absolutely sure if the issue is the same, err on the side of caution and just file the issue.  You can add a comment saying it might be the same as another issue number.  Our team will assess and close as duplicate, if it is in fact a duplicate.
-  - If issue does NOT exist, use the template to file a new issue.
-* When filing the issue, please be sure to provide as much information as possible, including the output of the scripts to collect information about the configuration.  This will help reduce the churn required to understand how to reproduce the issue.
-* Check the issue regularly as there may be additional questions or information required to successfully reproduce the issue.
+* Use your best judgement for issue creation. If your issue is already listed, upvote the issue and
+  comment or post to provide additional details, such as how you reproduced this issue.
+* If you're not sure if your issue is the same, err on the side of caution and file your issue.
+  You can add a comment to include the issue number (and link) for the similar issue. If we evaluate
+  your issue as being the same as the existing issue, we'll close the duplicate.
+* If your issue doesn't exist, use the issue template to file a new issue.
+  * When filing an issue, be sure to provide as much information as possible, including script output so
+    we can collect information about your configuration. This helps reduce the time required to
+    reproduce your issue.
+  * Check your issue regularly, as we may require additional information to successfully reproduce the
+    issue.
 * You may also open an issue to ask questions to the maintainers about whether a proposed change meets the acceptance criteria, or to discuss an idea pertaining to the library. 
 
 <!-- [PART1] Instructions:
@@ -148,7 +153,8 @@ Our repositories follow a workflow where all changes go into the **develop** bra
 
 <!-- [PART6] Instructions:
 This section should offer guidelines to follow when raising a pull request. 
-You can also base this on the generic steps provided in https://github.com/ROCm/ROCm/blob/develop/CONTRIBUTING.md, but append it with more details about your library's methods.
+If you're one of the few repos that don't use the develop branch as default, you should update above text to your default branch.
+You can also base this section on the generic steps provided in https://github.com/ROCm/ROCm/blob/develop/CONTRIBUTING.md, but append it with more details about your library's methods.
 
 MIOpen Example: 
 MIOpen accepts the implementation of kernels in either OpenCL or HIP. It is recommended to 
