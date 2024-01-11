@@ -9,7 +9,7 @@ slug: contributing_to_LIBRARY_NAME
 We welcome contributions to LIBRARY_NAME.  Please follow these details to help ensure your contributions will be successfully accepted.
 
 <!-- TEMPLATE INSTRUCTIONS FOR LIBRARY OWNERS:
-Step 1: Make a copy of this template into a branch for your repository. Rename template file to CONTRIBUTING.md and ensure it in the root of your repo or .github/CONTRIBUTING.md
+Step 1: Make a copy of this template into a branch for your repository. Rename template file to CONTRIBUTING.md and ensure it is in the root of your repo or in .github/CONTRIBUTING.md
 Step 2: Rename all instances of "LIBRARY_NAME" above to the name of your library.  Search/find/replace.
 Step 3: Read the Motivation section below to get a sense for why we need to publish a CONTRIBUTING.md
 Step 4: Review all 10 instruction sections below [PART1-PART10] with your team to come up with your CONTRIBUTING.md instructions for the community.  5 are optional ones.
