@@ -17,41 +17,40 @@ Step 5: Ensure a Codeowners file is included in your repository with Maintainers
 Step 6: Remove all HTML comments/Instructions/MIOpen examples from this template to make it release-ready.
 Step 7: Commit and push this file to your public repo.
 
-
 MOTIVATION:
-The developer base of an open-source ROCm software ecosystem is expanding. 
+The developer base of an open-source ROCm software ecosystem is expanding.
 The external developers need guidelines for understanding what can be contributed
-into each library of ROCm; where contributions could be parked in its respective 
-directory structure; what level of testing, performance benchmarking and code 
-formatting are required for their contributions. It should inform them about the 
+into each library of ROCm; where contributions could be parked in its respective
+directory structure; what level of testing, performance benchmarking and code
+formatting are required for their contributions. It should inform them about the
 release process along with how each library's release lands in ROCm packages.
- 
-Either the absence or the poor quality of the guidelines could have a major impact 
+
+Either the absence or the poor quality of the guidelines could have a major impact
 on the perception of external developers about the maturity of ROCm ecosystem.
 
-The onboarding experience the developer goes through during raising and merging 
+The onboarding experience the developer goes through during raising and merging
 their very first pull request influences not only their workflow for subsequent
 pull requests but also their recommendations for other developers.
 
-AMD's recent engagement with its strategic partner in ROCm has revealed to us 
-the importance of these guidelines for developer's onboarding experience and 
+AMD's recent engagement with its strategic partner in ROCm has revealed to us
+the importance of these guidelines for developer's onboarding experience and
 the overall impact of their contributions to end users.
 
-For illustration, AMD's strategic partner wasn't aware about the acceptance criteria 
-of MIOpen and thereby, assumed that any deep learning kernels could be contributed 
-into MIOpen. In the same vein, they were unaware about the composable kernel library 
-and its potential for developing modular, performant kernels. 
+For illustration, AMD's strategic partner wasn't aware about the acceptance criteria
+of MIOpen and thereby, assumed that any deep learning kernels could be contributed
+into MIOpen. In the same vein, they were unaware about the composable kernel library
+and its potential for developing modular, performant kernels.
 
-Below is a template for the external contributor's guidelines. 
+Below is a template for the external contributor's guidelines.
 The template offers a starting point for each library owner which could be amended
-to suit the respective library. 
+to suit the respective library.
 
-The final guidelines of each library should be posted as CONTRIBUTING.md on GitHub repo or 
+The final guidelines of each library should be posted as CONTRIBUTING.md on GitHub repo or
 could be posted on their landing page or the Wiki tab of GitHub project.
 
-Below is the template of contributor guidelines, followed by a sample for the MIOpen 
-library of ROCm. 
---> 
+Below is the template of contributor guidelines, followed by a sample for the MIOpen
+library of ROCm.
+-->
 
 ## Issue Discussion ##
 
@@ -68,13 +67,13 @@ Please use the GitHub Issues tab to notify us of issues.
     reproduce your issue.
   * Check your issue regularly, as we may require additional information to successfully reproduce the
     issue.
-* You may also open an issue to ask questions to the maintainers about whether a proposed change meets the acceptance criteria, or to discuss an idea pertaining to the library. 
+* You may also open an issue to ask questions to the maintainers about whether a proposed change
+  meets the acceptance criteria, or to discuss an idea pertaining to the library.
 
 <!-- [PART1] Instructions:
 Above is fairly standard.  Please add any special instructions (if any) your team may have regarding issues -->
 
-
-## Acceptance Criteria ## 
+## Acceptance Criteria ##
 
 <!-- [PART2] Instructions:
 Include details of your library such as:
@@ -84,58 +83,56 @@ Include details of your library such as:
 
 The specification of performance criteria shouldn't include exact numeric values i.e x% perf gains.
 However, it should include some language suggesting the need of notable performance gain to avoid
-code duplication and code maintenance if no gain is found. Contributors should be guided about 
-any performance benchmarking mechanism including baseline comparison. 
+code duplication and code maintenance if no gain is found. Contributors should be guided about
+any performance benchmarking mechanism including baseline comparison.
 
-Additionally, to encourage contributors, we should point out that the "Issue" tab, as defined below, 
-could be leveraged by them to discuss with the community members, features they would like to 
+Additionally, to encourage contributors, we should point out that the "Issue" tab, as defined below,
+could be leveraged by them to discuss with the community members, features they would like to
 bring in or the purported perf gains it would bring, before raising pull requests.
 
+MIOpen Example:
+The goal of MIOpen library is to provide the optimized implementation of ops found
+in machine learning models. The library offers the implementation of either fwd or
+bwd or both pass. It also supports the fusion of multiple ops.
 
-MIOpen Example: 
-The goal of MIOpen library is to provide the optimized implementation of ops found 
-in machine learning models. The library offers the implementation of either fwd or 
-bwd or both pass. It also supports the fusion of multiple ops. 
- 
 Contributors wanting to submit new implementations of ops, should follow
 the below-mentioned guidelines.
 
 * New kernels - not present in MIOpen/
-   + Level-1 bar: The critical ops found in machine learning ops, found in cuDNN, cuTLASS 
+   + Level-1 bar: The critical ops found in machine learning ops, found in cuDNN, cuTLASS
      but missing in MIOpen.
-   + If it meets this Level-1 bar, 
-        - If new op is present in frameworks such as rocm/pytorch, rocm/tf, deepspeed or 
-            fastertransformer either as a hipified version or a standalone version, 
-            it would be accepted 
+   + If it meets this Level-1 bar,
+        - If new op is present in frameworks such as rocm/pytorch, rocm/tf, deepspeed or
+            fastertransformer either as a hipified version or a standalone version,
+            it would be accepted
             + Level-2 perf bar:
-                - If notable performance gain is demonstrated on average (geomean) 
+                - If notable performance gain is demonstrated on average (geomean)
                   against the baseline at per-op level.
                 - If notable performance gain is demonstrated at end-to-end model level
                   where minor gains accumulated by frequent op-level invocations could lead to
                   noticeable model level improvement.
         - If new op is not present in any frameworks or ROCm libraries
-            + No performance gating factor 
-   + If it doesn't meet this Level-1 bar, **exceptions** are allowed which could be discussed 
+            + No performance gating factor
+   + If it doesn't meet this Level-1 bar, **exceptions** are allowed which could be discussed
       via Issue tab with the community.
-* Overlapping kernels - present in MIOpen 
+* Overlapping kernels - present in MIOpen
    + AMD would accept op/kernel, based on the Level-2 perf bar defined above.
 
 -->
 
-### Exceptions ### 
+### Exceptions ###
 
 <!-- [PART3] Instructions (optional):
-It may be necessary to state the exceptions permitted within the perimeter of 
-acceptance criteria and specify a particular set of guidelines developers could 
+It may be necessary to state the exceptions permitted within the perimeter of
+acceptance criteria and specify a particular set of guidelines developers could
 follow to meet those exceptions.
 -->
-
 
 ## Code Structure ##
 
 <!-- [PART4] Instructions (optional):
 In this section, one should explain the organization of code - its directory structure.
-It might not be necessary to cover each and every directory but very important to 
+It might not be necessary to cover each and every directory but very important to
 specify the external API directory; key source, test, performance and doc directories;
 third-party and output directories.
 -->
@@ -143,27 +140,29 @@ third-party and output directories.
 ## Coding Style ##
 
 <!-- [PART5] Instructions (optional):
-Each library has its own coding style.  If there are particular style details you would like to highlight, 
-this is the section to document it.  Try to be concise and just highlight big do/don't. If coding style is too long, the contributor won't bother with submitting a PR. Remember, your team will be able to review PRs so that's your chance to correct any coding style changes later.
+Each library has its own coding style.  If there are particular style details you would like to highlight,
+this is the section to document it.  Try to be concise and just highlight big do/don't.
+If coding style is too long, the contributor won't bother with submitting a PR.
+Remember, your team will be able to review PRs so that's your chance to correct any coding style changes later.
 -->
 
-## Pull Request Guidelines ## 
+## Pull Request Guidelines ##
 
-Our repositories follow a workflow where all changes go into the **develop** branch. This branch serves as an integration branch for new code. 
+Our repositories follow a workflow where all changes go into the **develop** branch. This branch serves as an integration branch for new code.
 
 <!-- [PART6] Instructions:
-This section should offer guidelines to follow when raising a pull request. 
+This section should offer guidelines to follow when raising a pull request.
 If you're one of the few repos that don't use the develop branch as default, you should update above text to your default branch.
 You can also base this section on the generic steps provided in https://github.com/ROCm/ROCm/blob/develop/CONTRIBUTING.md, but append it with more details about your library's methods.
 
-MIOpen Example: 
-MIOpen accepts the implementation of kernels in either OpenCL or HIP. It is recommended to 
-leverage HIP for modularity and scalability purpose e.g. AMD's composable kernel library is 
+MIOpen Example:
+MIOpen accepts the implementation of kernels in either OpenCL or HIP. It is recommended to
+leverage HIP for modularity and scalability purpose e.g. AMD's composable kernel library is
 built in HIP.
 -->
 
-### Deliverables
- 
+### Deliverables ###
+
 <!-- [PART7] Instructions:
    * Kinds of tests - unit, integration & perf, a feature should accompany
    * External API documentation updates
@@ -174,7 +173,7 @@ MIOpen Example:
 1. Here are the key components required in kernel's pull request.
 + Each kernel needs to support these datatypes
      - Until ROCm5.6,  fp16, bfloat16, fp32
-     - Starting ROCm5.7, f8 
+     - Starting ROCm5.7, f8
 + Introduce the host-side API, if required
 E.g. For LayerNorm, https://github.com/ROCmSoftwarePlatform/MIOpen/blob/develop/include/miopen/miopen.h
 + Add unit tests in gtest format
@@ -186,8 +185,8 @@ https://github.com/ROCmSoftwarePlatform/MIOpen/tree/master/driver
    - obtain the baseline from ROCm/Pytorch build: https://github.com/ROCmSoftwarePlatform/pytorch/blob/main/aten/src
 /ATen/native/cuda/layer_norm_kernel.cu
    - obtain the baseline from ROCm/Composable kernel library.
-+ For overlapping kernels in MIOpen, 
-   - obtain the baseline by running MIOpen/driver code 
++ For overlapping kernels in MIOpen,
+   - obtain the baseline by running MIOpen/driver code
 
 1. For each new file in repository, 
 Please include the licensing header
@@ -223,11 +222,11 @@ Please include the licensing header
 ### Process ###
 
 <!-- [PART8] Instructions:
-   * Outline the PR review process, most importantly, ensure list of reviewers are updated in Codeowners file 
+   * Outline the PR review process, most importantly, ensure list of reviewers are updated in Codeowners file
    * List out code formatting steps.
    * Detail how to get and run you test suite
    * Explain the CI/CD process
-       - different hardware targets under test 
+       - different hardware targets under test
        - access mechanism to CI logs
        - typical failures and resolution suggestion
 
@@ -239,10 +238,10 @@ MIOpen Example:
 
 MIOpen uses the clang-format tool for formatting code in source files.
 The tool is installed as part of dependency installation of MIOpen 
-The formatting style is captured in .clang-format which is located at 
+The formatting style is captured in .clang-format which is located at
 the root of MIOpen. These are different options to follow:
    1. Run the command -  clang-format-12 -style=file -i <path-to-the-source-file>
-   1. For multiple files in your stashed commit, run the composed bash command 
+   1. For multiple files in your stashed commit, run the composed bash command
                 described here 
    1. Automate running this command, upon git commit, use ./.githooks/install
 
@@ -272,7 +271,7 @@ It should inform the developers about the release process including the followin
 ## References ##
 
 <!-- [PART10] Instructions (optional):
-This section captures the links to github or ROCm documentation where the developers 
+This section captures the links to github or ROCm documentation where the developers
 could obtain the detailed information.
 
 MIOpen Example:
