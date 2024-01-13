@@ -13,8 +13,8 @@ Step 1: Make a copy of this template into a branch for your repository. Rename t
 Step 2: Rename all instances of "LIBRARY_NAME" above to the name of your library.  Search/find/replace.
 Step 3: Read the Motivation section below to get a sense for why we need to publish a CONTRIBUTING.md
 Step 4: Review all 10 instruction sections below [PART1-PART10] with your team to come up with your CONTRIBUTING.md instructions for the community.  5 are optional ones.
-Step 5: Ensure a Codeowners file is included in your repository with Maintainers/reviewers specified.
-Step 6: Remove all HTML comments/Instructions/MIOpen examples from this template to make it release-ready.
+Step 5: Ensure a CODEOWNERS file is included in your repository with maintainers/reviewers specified.
+Step 6: Remove all HTML comments/instructions/MIOpen examples from this template to make it release-ready.
 Step 7: Commit and push this file to your public repo.
 
 MOTIVATION:
@@ -32,13 +32,13 @@ The onboarding experience the developer goes through during raising and merging
 their very first pull request influences not only their workflow for subsequent
 pull requests but also their recommendations for other developers.
 
-AMD's recent engagement with its strategic partner in ROCm has revealed to us
+AMD's recent engagement with a strategic partner in ROCm has revealed to us
 the importance of these guidelines for developer's onboarding experience and
 the overall impact of their contributions to end users.
 
 For illustration, AMD's strategic partner wasn't aware about the acceptance criteria
 of MIOpen and thereby, assumed that any deep learning kernels could be contributed
-into MIOpen. In the same vein, they were unaware about the composable kernel library
+into MIOpen. In the same vein, they were unaware about the composable_kernel library
 and its potential for developing modular, performant kernels.
 
 Below is a template for the external contributor's guidelines.
@@ -86,9 +86,9 @@ However, it should include some language suggesting the need of notable performa
 code duplication and code maintenance if no gain is found. Contributors should be guided about
 any performance benchmarking mechanism including baseline comparison.
 
-Additionally, to encourage contributors, we should point out that the "Issue" tab, as defined below,
-could be leveraged by them to discuss with the community members, features they would like to
-bring in or the purported perf gains it would bring, before raising pull requests.
+Additionally, to encourage contributors, we should point out that the GitHub "Issues" tab could be
+leveraged to discuss features they would like to bring in. Or use it to discuss changes, along with the
+perf gains it would bring, before raising pull requests.
 
 MIOpen Example:
 The goal of MIOpen library is to provide the optimized implementation of ops found
@@ -175,14 +175,14 @@ MIOpen Example:
      - Until ROCm5.6,  fp16, bfloat16, fp32
      - Starting ROCm5.7, f8
 + Introduce the host-side API, if required
-E.g. For LayerNorm, https://github.com/ROCmSoftwarePlatform/MIOpen/blob/develop/include/miopen/miopen.h
+E.g. For LayerNorm, https://github.com/ROCm/MIOpen/blob/develop/include/miopen/miopen.h
 + Add unit tests in gtest format
-Dir: https://github.com/ROCmSoftwarePlatform/MIOpen/tree/5c8118ee4339c2aae55f20241440af207e59d2a7/test/gtest
+Dir: https://github.com/ROCm/MIOpen/tree/5c8118ee4339c2aae55f20241440af207e59d2a7/test/gtest
 + Include the relevant code in driver to measure per-kernel performance
-https://github.com/ROCmSoftwarePlatform/MIOpen/tree/master/driver
+https://github.com/ROCm/MIOpen/tree/master/driver
 + Post the performance # against the baseline kernel.
 + For new kernels in MIOpen, e.g. LayerNorm 
-   - obtain the baseline from ROCm/Pytorch build: https://github.com/ROCmSoftwarePlatform/pytorch/blob/main/aten/src
+   - obtain the baseline from ROCm/Pytorch build: https://github.com/ROCm/pytorch/blob/main/aten/src
 /ATen/native/cuda/layer_norm_kernel.cu
    - obtain the baseline from ROCm/Composable kernel library.
 + For overlapping kernels in MIOpen,
@@ -222,18 +222,18 @@ Please include the licensing header
 ### Process ###
 
 <!-- [PART8] Instructions:
-   * Outline the PR review process, most importantly, ensure list of reviewers are updated in Codeowners file
-   * List out code formatting steps.
+   * Outline the PR review process, most importantly, ensure list of reviewers are updated in CODEOWNERS file
+   * List out code formatting steps (if script is used to check formatting) or refer contributor to coding-style section if you've documented it there already.
    * Detail how to get and run you test suite
-   * Explain the CI/CD process
+   * Explain the external CI/CD process (if one exists at the time)
        - different hardware targets under test
        - access mechanism to CI logs
        - typical failures and resolution suggestion
 
 MIOpen Example:
 * Please follow the generic MIOpen PR review process, as defined here.
-* Reviewers are listed in the Codeowners file
-* For each commit message, please follow this recommend guidelines [here](https://github.com/ROCmSoftwarePlatform/MIOpen/wiki/How-to-assign-labels-to-Commit-Messages-and-PRs%3F).
+* Reviewers are listed in the CODEOWNERS file
+* For each commit message, please follow this recommend guidelines [here](https://github.com/ROCm/MIOpen/wiki/How-to-assign-labels-to-Commit-Messages-and-PRs%3F).
 * Code format guidelines
 
 MIOpen uses the clang-format tool for formatting code in source files.
@@ -271,10 +271,10 @@ It should inform the developers about the release process including the followin
 ## References ##
 
 <!-- [PART10] Instructions (optional):
-This section captures the links to github or ROCm documentation where the developers
+This section captures the links to GitHub or ROCm documentation where the developers
 could obtain the detailed information.
 
 MIOpen Example:
-1. [MIOpen Wiki](https://github.com/ROCmSoftwarePlatform/MIOpen/wiki)
-1. [MIOpen Readme](https://github.com/ROCmSoftwarePlatform/MIOpen#readme)
+1. [MIOpen Wiki](https://github.com/ROCm/MIOpen/wiki)
+1. [MIOpen Readme](https://github.com/ROCm/MIOpen#readme)
 -->
