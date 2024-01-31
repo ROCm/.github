@@ -1,8 +1,8 @@
----
-main_title: "Contributing to LIBRARY_NAME"
-main_body: This is the contribution guide for LIBRARY_NAME.  It should be renamed to CONTRIBUTING.md and included in your repository.
-slug: contributing_to_LIBRARY_NAME
----
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Contributing to LIBRARY_NAME">
+  <meta name="keywords" content="ROCm, contributing, LIBRARY_NAME">
+</head>
 
 # Contributing to LIBRARY_NAME #
 
@@ -148,7 +148,7 @@ Remember, your team will be able to review PRs so that's your chance to correct 
 
 ## Pull Request Guidelines ##
 
-Our repositories follow a workflow where all changes go into the **develop** branch. This branch serves as an integration branch for new code.
+When you create a pull request, you should target the default branch. Our current default branch is the **develop** branch, which serves as our integration branch.
 
 <!-- [PART6] Instructions:
 This section should offer guidelines to follow when raising a pull request.
