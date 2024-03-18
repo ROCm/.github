@@ -148,7 +148,8 @@ Remember, your team will be able to review PRs so that's your chance to correct 
 
 ## Pull Request Guidelines ##
 
-When you create a pull request, you should target the default branch. Our current default branch is the **develop** branch, which serves as our integration branch.
+By creating a pull request, you agree to the statements made in the [code license](#code-license) section. Your pull request should target the default branch. Our current default branch is the **develop** branch, which serves as our integration branch.
+
 
 <!-- [PART6] Instructions:
 This section should offer guidelines to follow when raising a pull request.
@@ -253,6 +254,10 @@ The tool is installed as part of dependency installation of MIOpen 
    1. Run 'make analyze' inside the "build" directory
 
 -->
+
+## Code License ##
+
+All code contributed to this project will be licensed under the license identified in the [License.txt](../LICENSE.txt). Your contribution will be accepted under the same license.
 
 ## Release Cadence ##
 
