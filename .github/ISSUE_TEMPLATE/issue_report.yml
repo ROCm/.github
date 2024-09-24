@@ -46,8 +46,8 @@ body:
 - type: input
   attributes:
     label: GPU
-    description: What GPU(s) did you encounter the issue on 
-    placeholder: "e.g. AMD Instinct MI300X or 2 x AMD Radeon RX 7900 XTX?"
+    description: What GPU(s) did you encounter the issue on?
+    placeholder: "e.g. AMD Instinct MI300X or 2 x AMD Radeon RX 7900 XTX"
   validations:
     required: true
 - type: dropdown
