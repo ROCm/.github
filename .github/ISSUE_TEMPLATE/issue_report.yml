@@ -43,27 +43,11 @@ body:
     placeholder: "e.g. AMD Ryzen 9 5900HX with Radeon Graphics"
   validations:
     required: true
-- type: dropdown
+- type: input
   attributes:
     label: GPU
-    description: What GPU(s) did you encounter the issue on (you can select multiple GPUs from the list)
-    multiple: true
-    options:
-        - AMD Instinct MI300X
-        - AMD Instinct MI300A
-        - AMD Instinct MI250X
-        - AMD Instinct MI250
-        - AMD Instinct MI210
-        - AMD Instinct MI100
-        - AMD Radeon Pro W7900
-        - AMD Radeon Pro W7800
-        - AMD Radeon Pro W6800
-        - AMD Radeon Pro V620
-        - AMD Radeon Pro VII
-        - AMD Radeon RX 7900 XTX
-        - AMD Radeon RX 7900 XT
-        - AMD Radeon RX 7900 GRE
-        - AMD Radeon VII
+    description: What GPU(s) did you encounter the issue on 
+    placeholder: "e.g. AMD Instinct MI300X or 2 x AMD Radeon RX 7900 XTX?"
   validations:
     required: true
 - type: dropdown
@@ -72,6 +56,7 @@ body:
     description: What version(s) of ROCm did you encounter the issue on?
     multiple: true
     options:
+        - ROCm 6.2.1
         - ROCm 6.2.0
         - ROCm 6.1.0
         - ROCm 6.0.0
