@@ -56,6 +56,8 @@ body:
     description: What version(s) of ROCm did you encounter the issue on?
     multiple: true
     options:
+        - ROCm 6.3.0
+        - ROCm 6.2.4
         - ROCm 6.2.3
         - ROCm 6.2.2
         - ROCm 6.2.1
