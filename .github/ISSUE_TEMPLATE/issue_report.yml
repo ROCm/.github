@@ -50,25 +50,11 @@ body:
     placeholder: "e.g. AMD Instinct MI300X or 2 x AMD Radeon RX 7900 XTX"
   validations:
     required: true
-- type: dropdown
+- type: input
   attributes:
     label: ROCm Version
     description: What version(s) of ROCm did you encounter the issue on?
-    multiple: true
-    options:
-        - ROCm 6.3.0
-        - ROCm 6.2.4
-        - ROCm 6.2.3
-        - ROCm 6.2.2
-        - ROCm 6.2.1
-        - ROCm 6.2.0
-        - ROCm 6.1.0
-        - ROCm 6.0.0
-        - ROCm 5.7.1
-        - ROCm 5.7.0
-        - ROCm 5.6.0
-        - ROCm 5.5.1
-        - ROCm 5.5.0
+    placeholder: "e.g. ROCm 6.3.1"
   validations:
     required: true
 - type: dropdown
