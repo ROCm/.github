@@ -62,60 +62,70 @@ body:
     label: ROCm Component
     description: (Optional) If this issue relates to a specific ROCm component, it can be mentioned here.
     options:
-      - AMDMIGraphX
-      - amdsmi
       - aomp
       - aomp-extras
-      - clang-ocl
+      - AMDMIGraphX
+      - amdsmi
       - clr
       - composable_kernel
       - flang
       - half
       - HIP
+      - HIPIFY
+      - hip-tests
       - hipBLAS
-      - HIPCC
+      - hipBLAS-common
+      - hipBLASLt
       - hipCUB
-      - HIP-Examples
       - hipFFT
       - hipfort
-      - HIPIFY
+      - hipother
+      - hipRAND
       - hipSOLVER
       - hipSPARSE
+      - hipSPARSELt
       - hipTensor
       - llvm-project
       - MIOpen
       - MIVisionX
       - rccl
       - rdc
+      - rocAL
       - rocALUTION
       - rocBLAS
-      - ROCdbgapi
+      - rocDecode
       - rocFFT
-      - ROCgdb
-      - ROCK-Kernel-Driver
-      - ROCm
-      - rocm_bandwidth_test
-      - rocm_smi_lib
-      - rocm-cmake
-      - ROCm-CompilerSupport
-      - rocm-core
-      - ROCm-Device-Libs
+      - rocJPEG
       - rocminfo
-      - rocMLIR
-      - ROCmValidationSuite
       - rocPRIM
-      - rocprofiler
-      - rocr_debug_agent
+      - rocPyDecode
       - rocRAND
-      - ROCR-Runtime
+      - rocSHMEM
       - rocSOLVER
       - rocSPARSE
       - rocThrust
-      - roctracer
-      - ROCT-Thunk-Interface
       - rocWMMA
+      - rocm-core
+      - rocm-cmake
+      - rocm-examples
+      - rocm_bandwidth_test
+      - rocm_smi_lib
+      - ROCdbgapi
+      - ROCgdb
+      - ROCmValidationSuite
+      - ROCK-Kernel-Driver
+      - ROCR-Runtime
+      - rocprofiler
+      - rocprofiler-compute
+      - rocprofiler-register
+      - rocprofiler-sdk
+      - rocprofiler-systems
+      - rocr_debug_agent
+      - roctracer
       - rpp
+      - spirv-llvm-translator
       - Tensile
+      - TransferBench
     multiple: true
 - type: textarea
   attributes:
