@@ -8,7 +8,8 @@
 
 ## JIRA ID
 
-<!-- Mention the JIRA ID. -->
+<!-- If applicable, mention the JIRA ID resolved by this PR (Example: Resolves SWDEV-12345). -->
+<!-- Do not post any JIRA links here. -->
 
 ## Test Plan
 
