@@ -137,7 +137,16 @@ body:
 - type: textarea
   attributes:
     label: (Optional for Linux users) Output of /opt/rocm/bin/rocminfo --support
-    description: The output of rocminfo --support could help to better address the problem.
+    description: The output of rocminfo --support could help to better address the problem. It is pre-wrapped in a collapsible section below.
+    value: |
+      <details>
+      <summary>rocminfo --support output</summary>
+
+      ```
+      Paste output here
+      ```
+
+      </details>
   validations:
     required: false
 
