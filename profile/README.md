@@ -27,7 +27,7 @@ If a component you're looking for isn't in its own repository anymore, it has mo
  
 ## Getting builds
  
-- **Released packages** — [installation guide](https://rocm.docs.amd.com/en/latest/install/rocm.html); packages are hosted at [repo.radeon.com](https://repo.radeon.com/rocm/)
+- **Released packages** — [installation guide](https://rocm.docs.amd.com/en/latest/install/rocm.html); packages are hosted at [repo.radeon.com](https://repo.amd.com/rocm/)
 - **Nightly and preview builds** — see [TheRock releases](https://github.com/ROCm/TheRock/blob/main/RELEASES.md) for prebuilt ROCm, PyTorch, and JAX packages, including multi-architecture builds
 - **Release notes and history** — [latest release](https://rocm.docs.amd.com/en/latest/about/release-notes.html), [all versions](https://rocm.docs.amd.com/en/latest/release/versions.html)
  
