@@ -14,7 +14,7 @@ body:
       ```
         echo "OS:" && cat /etc/os-release | grep -E "^(NAME=|VERSION=)";
         echo "CPU: " && cat /proc/cpuinfo | grep "model name" | sort --unique;
-        echo "GPU:" && /opt/rocm/bin/rocminfo | grep -E "^\s*(Name|Marketing Name)";
+        echo "GPU:" && rocminfo | grep -E "^\s*(Name|Marketing Name)";
       ```
         
       Windows:
@@ -33,7 +33,7 @@ body:
   attributes:
     label: Operating System
     description: What is the name and version number of the OS?
-    placeholder: "e.g. Ubuntu 22.04.3 LTS (Jammy Jellyfish)"
+    placeholder: "e.g. Ubuntu 26.04 LTS"
   validations:
     required: true
 - type: input
@@ -54,9 +54,40 @@ body:
   attributes:
     label: ROCm Version
     description: What version(s) of ROCm did you encounter the issue on?
-    placeholder: "e.g. ROCm 6.3.1"
+    placeholder: "e.g. ROCm 10.0"
   validations:
     required: true
+- type: dropdown
+  attributes:
+    label: Installation Method
+    description: How did you install ROCm?
+    options:
+      - Python wheels
+      - Package manager
+      - Tarball
+      - Built from source
+      - Other (describe in Additional Information)
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Installed ROCm Packages / Versions
+    description: |
+      Paste the output of the command matching your installation method above. This inventory of installed component versions is critical for triage.
+
+      - Python wheels: `pip freeze`
+      - Package manager: `apt list --installed 2>/dev/null | grep -iE "rocm|hip|amdgpu"` (use the equivalent for your package manager, e.g. `rpm -qa` on dnf/zypper systems)
+    value: |
+      <details>
+      <summary>Installed ROCm packages / versions</summary>
+
+      ```
+      Paste output here
+      ```
+
+      </details>
+  validations:
+    required: false
 - type: dropdown
   attributes:
     label: ROCm Component
@@ -133,10 +164,10 @@ body:
     description: (Optional) Detailed steps to reproduce the issue.
   validations:
     required: false
-    
+
 - type: textarea
   attributes:
-    label: (Optional for Linux users) Output of /opt/rocm/bin/rocminfo --support
+    label: (Optional for Linux users) Output of rocminfo --support
     description: The output of rocminfo --support could help to better address the problem. It is pre-wrapped in a collapsible section below.
     value: |
       <details>
