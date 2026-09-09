@@ -154,7 +154,7 @@ By creating a pull request, you agree to the statements made in the [code licens
 <!-- [PART6] Instructions:
 This section should offer guidelines to follow when raising a pull request.
 If you're one of the few repos that don't use the develop branch as default, you should update above text to your default branch.
-You can also base this section on the generic steps provided in https://github.com/ROCm/ROCm/blob/develop/CONTRIBUTING.md, but append it with more details about your library's methods.
+You can also base this section on the generic steps provided in https://github.com/ROCm/TheRock/blob/main/GOVERNANCE.md#common-contribution-guidelines, but append it with more details about your library's methods.
 
 MIOpen Example:
 MIOpen accepts the implementation of kernels in either OpenCL or HIP. It is recommended to
